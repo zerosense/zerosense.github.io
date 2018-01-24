@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="shortcut icon" href="img/123.html" type="image/x-icon" /> 
+<title>Fade.Cash</title>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(document).bind("contextmenu",function(e){
+        return false;
+    });
+});
+   </script>
+
+<title>Fade.Cash</title>
+<script src="jquery.js"></script>
+<script src="js/jquery.marquee.min.html"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';html,body{font-family:'Roboto Mono',monospace;background:#21212100;height:100%;margin:0;}.container{height:100%;width:100%;justify-content:center;align-items:center;display:flex;}.text{font-weight:100;font-size:72px;color:#fafafa;}.dud{color:#757575;}.text-bg{-webkit-filter:blur(20px);-o-filter:blur(20px);filter:blur(20px);}</style>
+</head>
+<body oncontextmenu="return false">
+<div class="container">
+<div style="background-color: transparent; top: 0px; left: 0px; position: absolute; width: 0px; height: 0px; z-index:9999"></div>
+<div style="background-color: transparent; position: absolute; z-index:9">
+<center><span class="text text-bg"></span><span class="text" style="background-color:rgba(33, 33, 33, 0); pointer-events:none;"></span></center>
+</div>
+</div>
+<center>
+<center><span style="position: absolute; top: 60%; left: 35%; width: 30%; color: #BEBEBE; font-size: 18px;"><span style="opacity: 0"></span>
+| <a href="https://selly.gg/@ZeRo1337" style="color:#BEBEBE" target="_blank">Selly</a> | 
+<a href="http://steamcommunity.com/profiles/76561198426898433/" style="color:#BEBEBE" target="_blank">Steam</a> | 
+<a href="https://discord.gg/p877UAC" style="color:#BEBEBE" target="_blank">Discord</a> |
+<a href="https://fade.cash/forum/" style="color:#BEBEBE" target="_blank">Private Cheat</a> |
+</span></center>
+
+<div class="video-background">
+    
+        <div class="video-foreground">
+    
+          <iframe src="https://www.youtube.com/embed/0umsKhOTGTg?start=19&controls=0&start=18&showinfo=0&rel=0&autoplay=1&loop=1&playlist=0umsKhOTGTg" frameborder="0" allowfullscreen></iframe>
+        </div>
+    
+      </div>
+<script>
+"use strict";
+
+function _classCallCheck(a, b) {
+    if (!(a instanceof b)) throw new TypeError("Cannot call a class as a function")
+}
+var TextScramble = function() {
+        function a(b) {
+            _classCallCheck(this, a), this.el = b, this.chars = "$", this.update = this.update.bind(this)
+        }
+        return a.prototype.setText = function(b) {
+            var c = this,
+                d = this.el.innerText,
+                e = Math.max(d.length, b.length),
+                f = new Promise(function(a) {
+                    return c.resolve = a
+                });
+            this.queue = [];
+            for (var g = 0; g < e; g++) {
+                var h = d[g] || "",
+                    i = b[g] || "",
+                    j = Math.floor(100 * Math.random()),
+                    k = j + Math.floor(60 * Math.random());
+                this.queue.push({
+                    from: h,
+                    to: i,
+                    start: j,
+                    end: k
+                })
+            }
+            return cancelAnimationFrame(this.frameRequest), this.frame = 0, this.update(), f
+        }, a.prototype.update = function() {
+            for (var b = "", c = 0, d = 0, e = this.queue.length; d < e; d++) {
+                var f = this.queue[d],
+                    g = f.from,
+                    h = f.to,
+                    i = f.start,
+                    j = f.end,
+                    k = f.char;
+                this.frame >= j ? (c++, b += h) : this.frame >= i ? ((!k || Math.random() < .18) && (k = this.randomChar(), this.queue[d].char = k), b += '<span class="dud">' + k + "</span>") : b += g
+            }
+            this.el.innerHTML = b, c === this.queue.length ? this.resolve() : (this.frameRequest = requestAnimationFrame(this.update), this.frame++)
+        }, a.prototype.randomChar = function() {
+            return this.chars[Math.floor(Math.random() * this.chars.length)]
+        }, a
+    }(),
+    phrases = ["ZeRo$ense"],
+    el = document.querySelectorAll(".text")[1],
+    fx = new TextScramble(el),
+    counter = 0,
+    next = function a() {
+        counter < 10 && fx.setText(phrases[counter]).then(function() {
+            setTimeout(a, 1000)
+        })
+    };
+next();
+</script>
+
+<script>
+	setInterval(function(){
+		a = document.querySelectorAll(".text")[1].innerHTML
+		a = a.split('<span class="dud">').join('').split('</span>').join('').split('&lt').join('').split('&gt').join('')
+		document.title = a
+	}, 10);
+	
+</script>
+
+<script>
+function hidePreloader() {
+	var preloader = $('.spinner-wrapper');
+	preloader.fadeOut(500);
+}
+
+setTimeout(
+	function(){
+		hidePreloader();
+	}, 
+1000);
+</script>
+<audio autoplay id="oof">
+  <source src="music/song.mp3">
+</audio>
+    
+     <script>
+    /*function check(e)
+    {
+    alert(e.keyCode);
+    }*/
+    document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
+                alert('Fuck you!\n CTRL+U is not allowed. Be creative!');
+            }
+            return false;
+    };
+    </script>
+         <script>
+    /*function check(e)
+    {
+    alert(e.keyCode);
+    }*/
+    document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
+                alert('oooooooof');
+            }
+            return false;
+    };
+    </script>
+<script>
+  var audio = document.getElementById("oof");
+  audio.volume = 0.2;
+</script>
+</body>
+</html>
